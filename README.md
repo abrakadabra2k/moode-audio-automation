@@ -15,7 +15,7 @@ Note that node-red default installation is without password, so you have to crea
 
 Now you can just upload the flows.json file to your node-red installation (you have to change some things first i.e. IP, name etc.) or follow the following guide:
 
-You have to create the following flows:
+You have to create the following flows (picture not showing current flows in flows.json):
 
 ![flows](https://user-images.githubusercontent.com/100039669/154813898-5ebf3ce6-1137-4bbc-8c44-d57fa7b39e66.png)
 
@@ -68,6 +68,7 @@ The only thing to do in order for node-red to be accessible from Alexa is to add
 sudo apt-get install iptables-persistent
 sudo iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
 sudo iptables -A PREROUTING -t nat -i wlan0 -p tcp --dport 80 -j REDIRECT --to-port 8980
+sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8980
 sudo netfilter-persistent save
 sudo netfilter-persistent reload
 ```
