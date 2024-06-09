@@ -15,9 +15,9 @@ Note that node-red default installation is without password, so you have to crea
 
 Now you can just upload the flows.json file to your node-red installation (you have to change some things first i.e. IP, name etc.) or follow the following guide:
 
-You have to create the following flows (picture not showing current flows in flows.json):
+You have to create the following flows:
+![image](https://github.com/abrakadabra2k/moode-audio-automation/assets/43200593/1ac3c4ff-894b-43a6-9cb1-defc83028d99)
 
-![flows](https://user-images.githubusercontent.com/100039669/154813898-5ebf3ce6-1137-4bbc-8c44-d57fa7b39e66.png)
 
 In order to create these flows, you need the following in your node-red:
 
