@@ -19,8 +19,9 @@
         "wires": [
             [
                 "ded11920c8a1b9a4",
-                "6dd24e25e4c50671",
-                "c1ef6e520434e34c"
+                "c1ef6e520434e34c",
+                "7f01abaec561defe",
+                "3d2142f050aad290"
             ]
         ]
     },
@@ -28,7 +29,7 @@
         "id": "ded11920c8a1b9a4",
         "type": "amazon-echo-device",
         "z": "cf398fad7586328c",
-        "name": "Pi Audio",
+        "name": "Pie Audio",
         "topic": "",
         "x": 440,
         "y": 140,
@@ -43,8 +44,9 @@
         "type": "function",
         "z": "cf398fad7586328c",
         "name": "",
-        "func": "res={}\nif (msg.on) {\n  res.url=\"http://10.0.0.10/command/?cmd=play\"\n} else {\n  res.url=\"http://10.0.0.10/command/?cmd=stop\"\n}\nres.payload=\"\"\nreturn res;",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=play\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=stop\"\n}\nres.payload=\"\"\nreturn res;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -69,61 +71,12 @@
         "tls": "",
         "persist": false,
         "proxy": "",
+        "insecureHTTPParser": false,
         "authType": "",
         "senderr": false,
+        "headers": [],
         "x": 770,
         "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7e7bbd6356108e23",
-        "type": "function",
-        "z": "cf398fad7586328c",
-        "name": "",
-        "func": "res={}\nif (msg.on) {\n  res.url=\"http://10.0.0.10/command/?cmd=next\"\n} else {\n  res.url=\"http://10.0.0.10/command/?cmd=previous\"\n}\nres.payload=\"\"\nreturn res;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 240,
-        "wires": [
-            [
-                "794d823bf2b3be40"
-            ]
-        ]
-    },
-    {
-        "id": "6dd24e25e4c50671",
-        "type": "amazon-echo-device",
-        "z": "cf398fad7586328c",
-        "name": "Pi Next Song",
-        "topic": "",
-        "x": 430,
-        "y": 240,
-        "wires": [
-            [
-                "7e7bbd6356108e23"
-            ]
-        ]
-    },
-    {
-        "id": "794d823bf2b3be40",
-        "type": "http request",
-        "z": "cf398fad7586328c",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": false,
-        "url": "",
-        "persist": false,
-        "authType": "",
-        "senderr": false,
-        "x": 770,
-        "y": 240,
         "wires": [
             []
         ]
@@ -132,9 +85,9 @@
         "id": "c1ef6e520434e34c",
         "type": "amazon-echo-device",
         "z": "cf398fad7586328c",
-        "name": "Pi Audio Volume",
+        "name": "Pie Audio Volume",
         "topic": "",
-        "x": 420,
+        "x": 430,
         "y": 340,
         "wires": [
             [
@@ -147,8 +100,9 @@
         "type": "function",
         "z": "cf398fad7586328c",
         "name": "",
-        "func": "res={}\nif (msg.on) {\n  res.url=\"http://10.0.0.10/command/?cmd=vol.sh%20-up%2010\"\n} else {\n  res.url=\"http://10.0.0.10/command/?cmd=vol.sh%20-dn%2010\"\n}\nres.payload=\"\"\nreturn res;",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=vol.sh%20-up%2010\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=vol.sh%20-dn%2010\"\n}\nres.payload=\"\"\nreturn res;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -175,6 +129,294 @@
         "senderr": false,
         "x": 770,
         "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f01abaec561defe",
+        "type": "amazon-echo-device",
+        "z": "cf398fad7586328c",
+        "name": "Pie ego",
+        "topic": "",
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "017d1c46feea2d19"
+            ]
+        ]
+    },
+    {
+        "id": "017d1c46feea2d19",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=clear\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=clear\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "036ba71c45e0cf5c"
+            ]
+        ]
+    },
+    {
+        "id": "036ba71c45e0cf5c",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 770,
+        "y": 400,
+        "wires": [
+            [
+                "0120370fdd6581ce"
+            ]
+        ]
+    },
+    {
+        "id": "0120370fdd6581ce",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url =\"http://192.168.178.51/command/?cmd=add%20https://streams.egofm.de/egoFM-hq\"\n} else {\n  res.url =\"http://192.168.178.51/command/?cmd=add%20https://streams.egofm.de/egoFM-hq\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 400,
+        "wires": [
+            [
+                "b73f31ef6dd6b159"
+            ]
+        ]
+    },
+    {
+        "id": "b73f31ef6dd6b159",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1110,
+        "y": 400,
+        "wires": [
+            [
+                "3fb790d071b63faf"
+            ]
+        ]
+    },
+    {
+        "id": "3fb790d071b63faf",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=play\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=play\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 400,
+        "wires": [
+            [
+                "dd137d2939b7dd0a"
+            ]
+        ]
+    },
+    {
+        "id": "dd137d2939b7dd0a",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1450,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d2142f050aad290",
+        "type": "amazon-echo-device",
+        "z": "cf398fad7586328c",
+        "name": "Pie paradies",
+        "topic": "",
+        "x": 410,
+        "y": 460,
+        "wires": [
+            [
+                "686df368e72c4dbd"
+            ]
+        ]
+    },
+    {
+        "id": "686df368e72c4dbd",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=clear\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=clear\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "ace4ad6c48379ed6"
+            ]
+        ]
+    },
+    {
+        "id": "ace4ad6c48379ed6",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 770,
+        "y": 460,
+        "wires": [
+            [
+                "ccd04da5a11e9095"
+            ]
+        ]
+    },
+    {
+        "id": "ccd04da5a11e9095",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=add%20https://stream.radioparadise.com/flacm\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=add%20https://stream.radioparadise.com/flacm\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 460,
+        "wires": [
+            [
+                "2978cd0dedbb47e5"
+            ]
+        ]
+    },
+    {
+        "id": "2978cd0dedbb47e5",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1110,
+        "y": 460,
+        "wires": [
+            [
+                "edd1a2bc97e240a1"
+            ]
+        ]
+    },
+    {
+        "id": "edd1a2bc97e240a1",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=play\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=play\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 460,
+        "wires": [
+            [
+                "43a8c151bdba5b76"
+            ]
+        ]
+    },
+    {
+        "id": "43a8c151bdba5b76",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1450,
+        "y": 460,
         "wires": [
             []
         ]
