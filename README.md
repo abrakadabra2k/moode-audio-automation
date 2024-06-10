@@ -63,12 +63,13 @@ return res;
 
 Almost there! Deploy your node-red flows and make sure that node-red has autostart enabled (systemctl enable nodered.service)
 
-The only thing to do in order for node-red to be accessible from Alexa is to add the following iptable rule in order to redirect port 80 to port 8980 (in order to run node-red as a simple user, you have to use high port):
+The only thing to do in order for node-red to be accessible from Alexa is to add the following iptable rule in order to redirect port 80 to port 8980 (in order to run node-red as a simple user, you have to use high port).
+replace ALEXAIP with the Ip of your alexa device otherwise your moode web gui is no more reachable. create multiple rules if you have multiple alexa devices.
 ```
 sudo apt-get install iptables-persistent
 sudo iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
-sudo iptables -A PREROUTING -t nat -i wlan0 -p tcp --dport 80 -j REDIRECT --to-port 8980
-sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8980
+sudo iptables -A PREROUTING -t nat -i wlan0 -p tcp - src ALEXAIP --dport 80 -j REDIRECT --to-port 8980
+sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --src ALEXAIP --dport 80 -j REDIRECT --to-port 8980
 sudo netfilter-persistent save
 sudo netfilter-persistent reload
 ```
