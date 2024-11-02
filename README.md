@@ -84,3 +84,6 @@ All set. Now you only have to discover devices from your Alexa and enjoy high qu
 or create a routine for "Alexa, next song" to "Turn on Pi Next Song"
 
 Note: Integration with Volumio is quite similar. You only have to change the function URI accordingly (https://volumio.github.io/docs/API/REST_API.html)
+
+**Update 241102**: Added spotify start/stop to the "activate/deactivate" device so that not only radio stations can be stopped.
+The activation needs a bit of work, see https://nerdiy.de/en/howto-nodered-control-spotify-from-nodered/
