@@ -8,38 +8,6 @@
         "env": []
     },
     {
-        "id": "bf1847b349281db4",
-        "type": "amazon-echo-hub",
-        "z": "cf398fad7586328c",
-        "port": "8980",
-        "processinput": 0,
-        "discovery": true,
-        "x": 170,
-        "y": 140,
-        "wires": [
-            [
-                "ded11920c8a1b9a4",
-                "c1ef6e520434e34c",
-                "7f01abaec561defe",
-                "3d2142f050aad290"
-            ]
-        ]
-    },
-    {
-        "id": "ded11920c8a1b9a4",
-        "type": "amazon-echo-device",
-        "z": "cf398fad7586328c",
-        "name": "Pie Audio",
-        "topic": "",
-        "x": 440,
-        "y": 140,
-        "wires": [
-            [
-                "f0436d0cc5d70b84"
-            ]
-        ]
-    },
-    {
         "id": "f0436d0cc5d70b84",
         "type": "function",
         "z": "cf398fad7586328c",
@@ -82,20 +50,6 @@
         ]
     },
     {
-        "id": "c1ef6e520434e34c",
-        "type": "amazon-echo-device",
-        "z": "cf398fad7586328c",
-        "name": "Pie Audio Volume",
-        "topic": "",
-        "x": 430,
-        "y": 340,
-        "wires": [
-            [
-                "1afea08da7ab4305"
-            ]
-        ]
-    },
-    {
         "id": "1afea08da7ab4305",
         "type": "function",
         "z": "cf398fad7586328c",
@@ -131,20 +85,6 @@
         "y": 340,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "7f01abaec561defe",
-        "type": "amazon-echo-device",
-        "z": "cf398fad7586328c",
-        "name": "Pie ego",
-        "topic": "",
-        "x": 400,
-        "y": 400,
-        "wires": [
-            [
-                "017d1c46feea2d19"
-            ]
         ]
     },
     {
@@ -278,20 +218,6 @@
         ]
     },
     {
-        "id": "3d2142f050aad290",
-        "type": "amazon-echo-device",
-        "z": "cf398fad7586328c",
-        "name": "Pie paradies",
-        "topic": "",
-        "x": 410,
-        "y": 460,
-        "wires": [
-            [
-                "686df368e72c4dbd"
-            ]
-        ]
-    },
-    {
         "id": "686df368e72c4dbd",
         "type": "function",
         "z": "cf398fad7586328c",
@@ -340,7 +266,7 @@
         "type": "function",
         "z": "cf398fad7586328c",
         "name": "",
-        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=add%20https://stream.radioparadise.com/flacm\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=add%20https://stream.radioparadise.com/flacm\"\n}\nres.payload=\"\"\nreturn res;",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url =\"http://192.168.178.51/command/?cmd=add%20http://stream.radioparadise.com/flacm\"\n} else {\n  res.url =\"http://192.168.178.51/command/?cmd=add%20http://stream.radioparadise.com/flacm\"\n}\nres.payload=\"\"\nreturn res;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -420,5 +346,290 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "bf1847b349281db4",
+        "type": "amazon-echo-hub",
+        "z": "cf398fad7586328c",
+        "port": "8980",
+        "processinput": 0,
+        "discovery": true,
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "ded11920c8a1b9a4",
+                "c1ef6e520434e34c",
+                "7f01abaec561defe",
+                "3d2142f050aad290",
+                "4a3320f50da037d3"
+            ]
+        ]
+    },
+    {
+        "id": "ded11920c8a1b9a4",
+        "type": "amazon-echo-device",
+        "z": "cf398fad7586328c",
+        "name": "Himbeere",
+        "topic": "",
+        "x": 440,
+        "y": 140,
+        "wires": [
+            [
+                "f0436d0cc5d70b84",
+                "a49eae33032d36f8"
+            ]
+        ]
+    },
+    {
+        "id": "c1ef6e520434e34c",
+        "type": "amazon-echo-device",
+        "z": "cf398fad7586328c",
+        "name": "Krach",
+        "topic": "",
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "1afea08da7ab4305"
+            ]
+        ]
+    },
+    {
+        "id": "7f01abaec561defe",
+        "type": "amazon-echo-device",
+        "z": "cf398fad7586328c",
+        "name": "Entdecker",
+        "topic": "",
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "017d1c46feea2d19"
+            ]
+        ]
+    },
+    {
+        "id": "3d2142f050aad290",
+        "type": "amazon-echo-device",
+        "z": "cf398fad7586328c",
+        "name": "Paradies",
+        "topic": "",
+        "x": 400,
+        "y": 460,
+        "wires": [
+            [
+                "686df368e72c4dbd"
+            ]
+        ]
+    },
+    {
+        "id": "564e26760726a90e",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=clear\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=clear\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 520,
+        "wires": [
+            [
+                "9150210baff4fdb5"
+            ]
+        ]
+    },
+    {
+        "id": "9150210baff4fdb5",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 770,
+        "y": 520,
+        "wires": [
+            [
+                "b3ec9d231e678c36"
+            ]
+        ]
+    },
+    {
+        "id": "b3ec9d231e678c36",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url =\"http://192.168.178.51/command/?cmd=add%20http://stream.radioparadise.com/rock-flacm\"\n} else {\n  res.url =\"http://192.168.178.51/command/?cmd=add%20http://stream.radioparadise.com/rock-flacm\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 520,
+        "wires": [
+            [
+                "4764902628418502"
+            ]
+        ]
+    },
+    {
+        "id": "4764902628418502",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1110,
+        "y": 520,
+        "wires": [
+            [
+                "601b6e25351f4114"
+            ]
+        ]
+    },
+    {
+        "id": "601b6e25351f4114",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.51/command/?cmd=play\"\n} else {\n  res.url=\"http://192.168.178.51/command/?cmd=play\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 520,
+        "wires": [
+            [
+                "a8078390dc8d6a8b"
+            ]
+        ]
+    },
+    {
+        "id": "a8078390dc8d6a8b",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1450,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a3320f50da037d3",
+        "type": "amazon-echo-device",
+        "z": "cf398fad7586328c",
+        "name": "Steinwurf",
+        "topic": "",
+        "x": 400,
+        "y": 520,
+        "wires": [
+            [
+                "564e26760726a90e"
+            ]
+        ]
+    },
+    {
+        "id": "d759cff56d74e471",
+        "type": "spotify",
+        "z": "cf398fad7586328c",
+        "name": "pause playing",
+        "auth": "19dbc6c39d3d24f0",
+        "api": "pause",
+        "x": 980,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a49eae33032d36f8",
+        "type": "switch",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "property": "on",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 220,
+        "wires": [
+            [
+                "d759cff56d74e471"
+            ],
+            [
+                "9d87953dd0209640"
+            ]
+        ]
+    },
+    {
+        "id": "9d87953dd0209640",
+        "type": "spotify",
+        "z": "cf398fad7586328c",
+        "name": "resume playing",
+        "auth": "19dbc6c39d3d24f0",
+        "api": "play",
+        "x": 980,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19dbc6c39d3d24f0",
+        "type": "spotify-auth",
+        "name": "user-modify-playback-state",
+        "scope": "streaming\nuser-modify-playback-state"
     }
 ]
