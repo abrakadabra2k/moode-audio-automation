@@ -87,3 +87,7 @@ Note: Integration with Volumio is quite similar. You only have to change the fun
 
 **Update 241102**: Added spotify start/stop to the "activate/deactivate" device so that not only radio stations can be stopped.
 The activation needs a bit of work, see https://nerdiy.de/en/howto-nodered-control-spotify-from-nodered/
+
+**Update 15112024**: 
+* Will only pause/resume Spotify if current device is used 
+* Multiroom receiver can be enabled/disabled via voice command

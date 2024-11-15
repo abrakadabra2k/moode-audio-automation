@@ -62,7 +62,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 340,
+        "y": 500,
         "wires": [
             [
                 "cb01eee888d82f93"
@@ -76,13 +76,17 @@
         "name": "",
         "method": "GET",
         "ret": "txt",
-        "paytoqs": false,
+        "paytoqs": "ignore",
         "url": "",
+        "tls": "",
         "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
         "authType": "",
         "senderr": false,
+        "headers": [],
         "x": 770,
-        "y": 340,
+        "y": 500,
         "wires": [
             []
         ]
@@ -100,7 +104,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 400,
+        "y": 560,
         "wires": [
             [
                 "036ba71c45e0cf5c"
@@ -124,7 +128,7 @@
         "senderr": false,
         "headers": [],
         "x": 770,
-        "y": 400,
+        "y": 560,
         "wires": [
             [
                 "0120370fdd6581ce"
@@ -144,7 +148,7 @@
         "finalize": "",
         "libs": [],
         "x": 940,
-        "y": 400,
+        "y": 560,
         "wires": [
             [
                 "b73f31ef6dd6b159"
@@ -168,7 +172,7 @@
         "senderr": false,
         "headers": [],
         "x": 1110,
-        "y": 400,
+        "y": 560,
         "wires": [
             [
                 "3fb790d071b63faf"
@@ -188,7 +192,7 @@
         "finalize": "",
         "libs": [],
         "x": 1280,
-        "y": 400,
+        "y": 560,
         "wires": [
             [
                 "dd137d2939b7dd0a"
@@ -212,7 +216,7 @@
         "senderr": false,
         "headers": [],
         "x": 1450,
-        "y": 400,
+        "y": 560,
         "wires": [
             []
         ]
@@ -230,7 +234,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "ace4ad6c48379ed6"
@@ -254,7 +258,7 @@
         "senderr": false,
         "headers": [],
         "x": 770,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "ccd04da5a11e9095"
@@ -274,7 +278,7 @@
         "finalize": "",
         "libs": [],
         "x": 940,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "2978cd0dedbb47e5"
@@ -298,7 +302,7 @@
         "senderr": false,
         "headers": [],
         "x": 1110,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "edd1a2bc97e240a1"
@@ -318,7 +322,7 @@
         "finalize": "",
         "libs": [],
         "x": 1280,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "43a8c151bdba5b76"
@@ -342,7 +346,7 @@
         "senderr": false,
         "headers": [],
         "x": 1450,
-        "y": 460,
+        "y": 620,
         "wires": [
             []
         ]
@@ -362,7 +366,10 @@
                 "c1ef6e520434e34c",
                 "7f01abaec561defe",
                 "3d2142f050aad290",
-                "4a3320f50da037d3"
+                "4a3320f50da037d3",
+                "11ed3f7867cf7dbf",
+                "852f74d889e13b35",
+                "c442be958974c3a1"
             ]
         ]
     },
@@ -372,12 +379,12 @@
         "z": "cf398fad7586328c",
         "name": "Himbeere",
         "topic": "",
-        "x": 440,
+        "x": 380,
         "y": 140,
         "wires": [
             [
                 "f0436d0cc5d70b84",
-                "a49eae33032d36f8"
+                "9ff502226eb6ac20"
             ]
         ]
     },
@@ -388,7 +395,7 @@
         "name": "Krach",
         "topic": "",
         "x": 390,
-        "y": 340,
+        "y": 500,
         "wires": [
             [
                 "1afea08da7ab4305"
@@ -402,7 +409,7 @@
         "name": "Entdecker",
         "topic": "",
         "x": 400,
-        "y": 400,
+        "y": 560,
         "wires": [
             [
                 "017d1c46feea2d19"
@@ -416,7 +423,7 @@
         "name": "Paradies",
         "topic": "",
         "x": 400,
-        "y": 460,
+        "y": 620,
         "wires": [
             [
                 "686df368e72c4dbd"
@@ -436,7 +443,7 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 520,
+        "y": 680,
         "wires": [
             [
                 "9150210baff4fdb5"
@@ -460,7 +467,7 @@
         "senderr": false,
         "headers": [],
         "x": 770,
-        "y": 520,
+        "y": 680,
         "wires": [
             [
                 "b3ec9d231e678c36"
@@ -480,7 +487,7 @@
         "finalize": "",
         "libs": [],
         "x": 940,
-        "y": 520,
+        "y": 680,
         "wires": [
             [
                 "4764902628418502"
@@ -504,7 +511,7 @@
         "senderr": false,
         "headers": [],
         "x": 1110,
-        "y": 520,
+        "y": 680,
         "wires": [
             [
                 "601b6e25351f4114"
@@ -524,7 +531,7 @@
         "finalize": "",
         "libs": [],
         "x": 1280,
-        "y": 520,
+        "y": 680,
         "wires": [
             [
                 "a8078390dc8d6a8b"
@@ -548,7 +555,7 @@
         "senderr": false,
         "headers": [],
         "x": 1450,
-        "y": 520,
+        "y": 680,
         "wires": [
             []
         ]
@@ -560,7 +567,7 @@
         "name": "Steinwurf",
         "topic": "",
         "x": 400,
-        "y": 520,
+        "y": 680,
         "wires": [
             [
                 "564e26760726a90e"
@@ -572,64 +579,320 @@
         "type": "spotify",
         "z": "cf398fad7586328c",
         "name": "pause playing",
-        "auth": "19dbc6c39d3d24f0",
+        "auth": "f658ec7c39016451",
         "api": "pause",
-        "x": 980,
-        "y": 200,
+        "x": 1240,
+        "y": 300,
         "wires": [
             []
         ]
     },
     {
-        "id": "a49eae33032d36f8",
+        "id": "d90c5806c304e56f",
         "type": "switch",
         "z": "cf398fad7586328c",
         "name": "",
-        "property": "on",
+        "property": "payload.device.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "ServerMoode Spotify",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1050,
+        "y": 240,
+        "wires": [
+            [
+                "274c212a4c30298a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "faff484003f82797",
+        "type": "spotify",
+        "z": "cf398fad7586328c",
+        "name": "getPlaybackForDeviceName",
+        "auth": "f658ec7c39016451",
+        "api": "getMyCurrentPlaybackState",
+        "x": 840,
+        "y": 240,
+        "wires": [
+            [
+                "d90c5806c304e56f"
+            ]
+        ]
+    },
+    {
+        "id": "274c212a4c30298a",
+        "type": "spotify",
+        "z": "cf398fad7586328c",
+        "name": "resume playing",
+        "auth": "f658ec7c39016451",
+        "api": "play",
+        "x": 1240,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cface7a1ed08d6b6",
+        "type": "switch",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "property": "payload.device.name",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "ServerMoode Spotify",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1050,
+        "y": 300,
+        "wires": [
+            [
+                "d759cff56d74e471"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "71f8b5085d0e3305",
+        "type": "spotify",
+        "z": "cf398fad7586328c",
+        "name": "getPlaybackForDeviceName",
+        "auth": "f658ec7c39016451",
+        "api": "getMyCurrentPlaybackState",
+        "x": 840,
+        "y": 300,
+        "wires": [
+            [
+                "cface7a1ed08d6b6"
+            ]
+        ]
+    },
+    {
+        "id": "9ff502226eb6ac20",
+        "type": "switch",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "property": "payload",
         "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
-                "v": "0",
+                "v": "on",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "1",
+                "v": "off",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 770,
-        "y": 220,
+        "x": 610,
+        "y": 280,
         "wires": [
             [
-                "d759cff56d74e471"
+                "faff484003f82797"
             ],
             [
-                "9d87953dd0209640"
+                "71f8b5085d0e3305"
             ]
         ]
     },
     {
-        "id": "9d87953dd0209640",
-        "type": "spotify",
+        "id": "11ed3f7867cf7dbf",
+        "type": "amazon-echo-device",
         "z": "cf398fad7586328c",
-        "name": "resume playing",
-        "auth": "19dbc6c39d3d24f0",
-        "api": "play",
-        "x": 980,
-        "y": 260,
+        "name": "Küche",
+        "topic": "",
+        "x": 350,
+        "y": 780,
+        "wires": [
+            [
+                "218672316566ea11"
+            ]
+        ]
+    },
+    {
+        "id": "852f74d889e13b35",
+        "type": "amazon-echo-device",
+        "z": "cf398fad7586328c",
+        "name": "Büro",
+        "topic": "",
+        "x": 350,
+        "y": 840,
+        "wires": [
+            [
+                "b84b38f115898c86"
+            ]
+        ]
+    },
+    {
+        "id": "c442be958974c3a1",
+        "type": "amazon-echo-device",
+        "z": "cf398fad7586328c",
+        "name": "Wohnzimmer",
+        "topic": "",
+        "x": 370,
+        "y": 900,
+        "wires": [
+            [
+                "90ecfa21c919ba15"
+            ]
+        ]
+    },
+    {
+        "id": "218672316566ea11",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url =\"http://192.168.178.46/command/?cmd=trx_control%20-rx%20On\"\n} else {\n  res.url =\"http://192.168.178.46/command/?cmd=trx_control%20-rx%20Off\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 780,
+        "wires": [
+            [
+                "8b344b9e7388547f"
+            ]
+        ]
+    },
+    {
+        "id": "b84b38f115898c86",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url=\"http://192.168.178.26/command/?cmd=trx_control%20-rx%20On\"\n} else {\n  res.url=\"http://192.168.178.26/command/?cmd=trx_control%20-rx%20Off\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 840,
+        "wires": [
+            [
+                "3dc3d8ab05e14182"
+            ]
+        ]
+    },
+    {
+        "id": "90ecfa21c919ba15",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nif (msg.on) {\n  res.url =\"http://192.168.178.52/command/?cmd=trx_control%20-rx%20On\"\n} else {\n  res.url =\"http://192.168.178.52/command/?cmd=trx_control%20-rx%20Off\"\n}\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 900,
+        "wires": [
+            [
+                "013069876e8cc207"
+            ]
+        ]
+    },
+    {
+        "id": "8b344b9e7388547f",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 780,
         "wires": [
             []
         ]
     },
     {
-        "id": "19dbc6c39d3d24f0",
+        "id": "3dc3d8ab05e14182",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "013069876e8cc207",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f658ec7c39016451",
         "type": "spotify-auth",
-        "name": "user-modify-playback-state",
-        "scope": "streaming\nuser-modify-playback-state"
+        "name": "Spotify OAuth2",
+        "scope": "user-read-playback-state\nuser-modify-playback-state\nuser-read-currently-playing\n"
     }
 ]
