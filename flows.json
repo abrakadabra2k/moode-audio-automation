@@ -731,7 +731,8 @@
         "y": 780,
         "wires": [
             [
-                "218672316566ea11"
+                "218672316566ea11",
+                "6338a8da0c223a6e"
             ]
         ]
     },
@@ -745,7 +746,8 @@
         "y": 840,
         "wires": [
             [
-                "b84b38f115898c86"
+                "b84b38f115898c86",
+                "6338a8da0c223a6e"
             ]
         ]
     },
@@ -759,7 +761,8 @@
         "y": 900,
         "wires": [
             [
-                "90ecfa21c919ba15"
+                "90ecfa21c919ba15",
+                "6338a8da0c223a6e"
             ]
         ]
     },
@@ -796,7 +799,7 @@
         "finalize": "",
         "libs": [],
         "x": 540,
-        "y": 840,
+        "y": 820,
         "wires": [
             [
                 "3dc3d8ab05e14182"
@@ -862,7 +865,7 @@
         "senderr": false,
         "headers": [],
         "x": 730,
-        "y": 840,
+        "y": 820,
         "wires": [
             []
         ]
@@ -888,6 +891,165 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "55ddfcd6c6a5b867",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "function 1",
+        "func": "res = { payload: 0 }\nif (msg.on) {\n    res.url = \"http://192.168.178.51/command/?cmd=get_output_format\"\n}\nres.payload = \"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 840,
+        "wires": [
+            [
+                "024ca679f789d0bc"
+            ]
+        ]
+    },
+    {
+        "id": "024ca679f789d0bc",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1210,
+        "y": 840,
+        "wires": [
+            [
+                "3a99cc0435f6be94"
+            ]
+        ]
+    },
+    {
+        "id": "6338a8da0c223a6e",
+        "type": "switch",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 910,
+        "y": 840,
+        "wires": [
+            [
+                "55ddfcd6c6a5b867"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3a99cc0435f6be94",
+        "type": "switch",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "{\"format\":\"Not playing\"}",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1390,
+        "y": 840,
+        "wires": [
+            [
+                "c6d40c53504c0d90",
+                "9c6057f51be5be6b"
+            ]
+        ]
+    },
+    {
+        "id": "c6d40c53504c0d90",
+        "type": "function",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "func": "res={payload :0}\nres.url=\"http://192.168.178.51/command/?cmd=play\"\nres.payload=\"\"\nreturn res;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 840,
+        "wires": [
+            [
+                "6abc3789e12ca9c8"
+            ]
+        ]
+    },
+    {
+        "id": "6abc3789e12ca9c8",
+        "type": "http request",
+        "z": "cf398fad7586328c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1710,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c6057f51be5be6b",
+        "type": "debug",
+        "z": "cf398fad7586328c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 900,
+        "wires": []
     },
     {
         "id": "f658ec7c39016451",
